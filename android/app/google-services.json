@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "767301657067",
+    "firebase_url": "https://map-bookreviewapp-8b503.firebaseio.com",
+    "project_id": "map-bookreviewapp-8b503",
+    "storage_bucket": "map-bookreviewapp-8b503.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767301657067:android:9337734896cf02f2c539ae",
+        "android_client_info": {
+          "package_name": "edu.uco.udadabhai.bookreview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "767301657067-tqeo0pr4jj5d2vi0rap5pffhem24r556.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5gDxi8DFAaXsc9FUqMt_8xs9CTl3Ftzg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "767301657067-tqeo0pr4jj5d2vi0rap5pffhem24r556.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "767301657067-luusnp0dtliiqun6jqkcuoi7lbjdl74t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "edu.uco.udadabhai.bookreview"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
