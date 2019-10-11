@@ -30,7 +30,7 @@ void stateChanged(Function fn) {
     this.context = context;
     return  Scaffold (
       appBar: AppBar (
-        title: Text('Prescribe Me'),
+        title: Text(""),
         actions: <Widget> [
           FlatButton.icon(
             icon: Icon(Icons.people, color: Colors.white,),
