@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">767301657067-tqeo0pr4jj5d2vi0rap5pffhem24r556.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://map-bookreviewapp-8b503.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">767301657067</string>
+    <string name="google_api_key" translatable="false">AIzaSyD5gDxi8DFAaXsc9FUqMt_8xs9CTl3Ftzg</string>
+    <string name="google_app_id" translatable="false">1:767301657067:android:9337734896cf02f2c539ae</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyD5gDxi8DFAaXsc9FUqMt_8xs9CTl3Ftzg</string>
+    <string name="google_storage_bucket" translatable="false">map-bookreviewapp-8b503.appspot.com</string>
+    <string name="project_id" translatable="false">map-bookreviewapp-8b503</string>
+</resources>
