@@ -1,10 +1,20 @@
+<<<<<<< HEAD
 #Thu Oct 10 19:32:38 CDT 2019
+=======
+#Thu Oct 10 21:38:40 CDT 2019
+>>>>>>> c608df29218908d3f85a8f6ba6d6c34de0998352
 path.2=classes3.dex
 path.1=classes2.dex
 path.0=classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
+<<<<<<< HEAD
 base.2=/Users/upasna/Documents/Mobile Apps/PrescribeMe/build/app/intermediates/transforms/dexMerger/debug/0
 base.1=/Users/upasna/Documents/Mobile Apps/PrescribeMe/build/app/intermediates/transforms/dexMerger/debug/0
 base.0=/Users/upasna/Documents/Mobile Apps/PrescribeMe/build/app/intermediates/transforms/dexMerger/debug/0
+=======
+base.2=D\:\\MobileApps\\prescribeme-1\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+base.1=D\:\\MobileApps\\prescribeme-1\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+base.0=D\:\\MobileApps\\prescribeme-1\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+>>>>>>> c608df29218908d3f85a8f6ba6d6c34de0998352

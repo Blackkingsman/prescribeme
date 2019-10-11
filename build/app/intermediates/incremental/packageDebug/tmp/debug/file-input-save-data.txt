@@ -1,4 +1,5 @@
 #Internal package file, do not edit.
+<<<<<<< HEAD
 #Thu Oct 10 19:32:39 CDT 2019
 4.path=classes.dex
 13.baseType=DIRECTORY
@@ -23,10 +24,37 @@
 11.set=ASSET
 0.set=NATIVE_RESOURCE
 15.base=/Users/upasna/Documents/Mobile Apps/PrescribeMe/build/app/intermediates/transforms/mergeJniLibs/debug/0
+=======
+#Thu Oct 10 21:38:42 CDT 2019
+4.path=flutter_assets/fonts/MaterialIcons-Regular.ttf
+13.baseType=DIRECTORY
+8.set=ASSET
+6.path=flutter_assets/kernel_blob.bin
+0.baseType=DIRECTORY
+10.path=lib/x86_64/libflutter.so
+5.baseType=DIRECTORY
+1.base=D\:\\MobileApps\\prescribeme-1\\build\\app\\intermediates\\transforms\\mergeJniLibs\\debug\\0
+8.path=flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+12.path=flutter_assets/assets/images/books.jpg
+3.base=D\:\\MobileApps\\prescribeme-1\\build\\app\\intermediates\\transforms\\mergeJniLibs\\debug\\0
+14.path=flutter_assets/isolate_snapshot_data
+15.set=ASSET
+4.set=ASSET
+5.base=D\:\\MobileApps\\prescribeme-1\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+7.base=D\:\\MobileApps\\prescribeme-1\\build\\app\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+11.base=D\:\\MobileApps\\prescribeme-1\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+9.base=D\:\\MobileApps\\prescribeme-1\\build\\app\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+13.base=D\:\\MobileApps\\prescribeme-1\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+1.baseType=DIRECTORY
+11.set=DEX
+0.set=ASSET
+15.base=D\:\\MobileApps\\prescribeme-1\\build\\app\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+>>>>>>> c608df29218908d3f85a8f6ba6d6c34de0998352
 14.baseType=DIRECTORY
 6.baseType=DIRECTORY
 7.set=ASSET
 14.set=ASSET
+<<<<<<< HEAD
 3.set=DEX
 2.baseType=DIRECTORY
 10.baseType=DIRECTORY
@@ -55,13 +83,51 @@
 8.baseType=DIRECTORY
 12.base=/Users/upasna/Documents/Mobile Apps/PrescribeMe/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
 14.base=/Users/upasna/Documents/Mobile Apps/PrescribeMe/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
+=======
+3.set=NATIVE_RESOURCE
+2.baseType=DIRECTORY
+10.baseType=DIRECTORY
+15.baseType=DIRECTORY
+1.path=lib/x86/libflutter.so
+7.baseType=DIRECTORY
+3.path=lib/armeabi-v7a/libflutter.so
+10.set=NATIVE_RESOURCE
+5.path=classes2.dex
+0.base=D\:\\MobileApps\\prescribeme-1\\build\\app\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+7.path=flutter_assets/vm_snapshot_data
+11.path=classes.dex
+9.path=flutter_assets/AssetManifest.json
+6.set=ASSET
+2.base=D\:\\MobileApps\\prescribeme-1\\build\\app\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+13.path=classes3.dex
+11.baseType=DIRECTORY
+4.base=D\:\\MobileApps\\prescribeme-1\\build\\app\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+15.path=flutter_assets/LICENSE
+3.baseType=DIRECTORY
+6.base=D\:\\MobileApps\\prescribeme-1\\build\\app\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+10.base=D\:\\MobileApps\\prescribeme-1\\build\\app\\intermediates\\transforms\\mergeJniLibs\\debug\\0
+13.set=DEX
+8.base=D\:\\MobileApps\\prescribeme-1\\build\\app\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+2.set=ASSET
+8.baseType=DIRECTORY
+12.base=D\:\\MobileApps\\prescribeme-1\\build\\app\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+14.base=D\:\\MobileApps\\prescribeme-1\\build\\app\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+>>>>>>> c608df29218908d3f85a8f6ba6d6c34de0998352
 9.set=ASSET
 count=16
 12.baseType=DIRECTORY
 4.baseType=DIRECTORY
+<<<<<<< HEAD
 5.set=ASSET
 9.baseType=DIRECTORY
 0.path=lib/x86/libflutter.so
 12.set=ASSET
 1.set=ASSET
+=======
+5.set=DEX
+9.baseType=DIRECTORY
+0.path=flutter_assets/FontManifest.json
+12.set=ASSET
+1.set=NATIVE_RESOURCE
+>>>>>>> c608df29218908d3f85a8f6ba6d6c34de0998352
 2.path=flutter_assets/assets/images/profile.jpg

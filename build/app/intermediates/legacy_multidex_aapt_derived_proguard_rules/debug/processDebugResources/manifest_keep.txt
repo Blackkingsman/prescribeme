@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 # Referenced at /Users/upasna/Documents/Mobile Apps/PrescribeMe/build/app/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:28
+=======
+# Referenced at D:\MobileApps\prescribeme-1\build\app\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:28
+>>>>>>> c608df29218908d3f85a8f6ba6d6c34de0998352
 -keep class io.flutter.app.FlutterApplication { <init>(...); }

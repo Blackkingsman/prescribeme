@@ -1,5 +1,6 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
 ADDED from /Users/upasna/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.3.0/android/src/main/AndroidManifest.xml:1:1-3:12
 INJECTED from /Users/upasna/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.3.0/android/src/main/AndroidManifest.xml:1:1-3:12
 INJECTED from /Users/upasna/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.3.0/android/src/main/AndroidManifest.xml:1:1-3:12
@@ -17,3 +18,22 @@ INJECTED from /Users/upasna/Documents/flutter/.pub-cache/hosted/pub.dartlang.org
 		INJECTED from /Users/upasna/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.3.0/android/src/main/AndroidManifest.xml
 		ADDED from /Users/upasna/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.3.0/android/src/main/AndroidManifest.xml
 		INJECTED from /Users/upasna/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.3.0/android/src/main/AndroidManifest.xml
+=======
+ADDED from C:\Users\tdphi\AppData\Roaming\Pub\Cache\hosted\pub.dartlang.org\path_provider-1.3.0\android\src\main\AndroidManifest.xml:1:1-3:12
+INJECTED from C:\Users\tdphi\AppData\Roaming\Pub\Cache\hosted\pub.dartlang.org\path_provider-1.3.0\android\src\main\AndroidManifest.xml:1:1-3:12
+INJECTED from C:\Users\tdphi\AppData\Roaming\Pub\Cache\hosted\pub.dartlang.org\path_provider-1.3.0\android\src\main\AndroidManifest.xml:1:1-3:12
+	package
+		ADDED from C:\Users\tdphi\AppData\Roaming\Pub\Cache\hosted\pub.dartlang.org\path_provider-1.3.0\android\src\main\AndroidManifest.xml:2:3-44
+		INJECTED from C:\Users\tdphi\AppData\Roaming\Pub\Cache\hosted\pub.dartlang.org\path_provider-1.3.0\android\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\tdphi\AppData\Roaming\Pub\Cache\hosted\pub.dartlang.org\path_provider-1.3.0\android\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\tdphi\AppData\Roaming\Pub\Cache\hosted\pub.dartlang.org\path_provider-1.3.0\android\src\main\AndroidManifest.xml:1:11-69
+uses-sdk
+INJECTED from C:\Users\tdphi\AppData\Roaming\Pub\Cache\hosted\pub.dartlang.org\path_provider-1.3.0\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\tdphi\AppData\Roaming\Pub\Cache\hosted\pub.dartlang.org\path_provider-1.3.0\android\src\main\AndroidManifest.xml
+INJECTED from C:\Users\tdphi\AppData\Roaming\Pub\Cache\hosted\pub.dartlang.org\path_provider-1.3.0\android\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\tdphi\AppData\Roaming\Pub\Cache\hosted\pub.dartlang.org\path_provider-1.3.0\android\src\main\AndroidManifest.xml
+		ADDED from C:\Users\tdphi\AppData\Roaming\Pub\Cache\hosted\pub.dartlang.org\path_provider-1.3.0\android\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\tdphi\AppData\Roaming\Pub\Cache\hosted\pub.dartlang.org\path_provider-1.3.0\android\src\main\AndroidManifest.xml
+>>>>>>> c608df29218908d3f85a8f6ba6d6c34de0998352
