@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../Controller/signuppage_controller.dart';
 import '../Model/user.dart';
 
+
 class SignUpPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -10,6 +11,8 @@ class SignUpPage extends StatefulWidget {
 }
 
 class SignUpPageState extends State<SignUpPage> {
+
+  DateTime _dateTime;
 
   SignUpPageController controller;
   BuildContext context;
@@ -29,12 +32,38 @@ class SignUpPageState extends State<SignUpPage> {
     this.context = context;
     return Scaffold (
       appBar: AppBar (
-        title: Text('Create Account'),
+        title: Text('Create Account', style: TextStyle(color: Colors.black),),
+        backgroundColor: Colors.lightGreen,
       ),
       body: Form (
         key: formKey,
         child: ListView (
           children: <Widget> [
+             TextFormField (
+              initialValue: user.firstname,
+              autocorrect: false,
+              decoration: InputDecoration (
+                hintText: 'First Name',
+                labelText: 'First Name',
+              ),
+              validator: controller.validateFirstName,
+              onSaved: controller.saveFirstName,
+            ),
+             TextFormField (
+              initialValue: user.lastname,
+              autocorrect: false,
+              decoration: InputDecoration (
+                hintText: 'Last Name',
+                labelText: 'Last Name',
+              ),
+              validator: controller.validateLastName,
+              onSaved: controller.saveLastName,
+            ),
+            FlatButton(
+              child: Text('Pick a date'),
+              onPressed: (){},
+              //onPressed: controller.saveBirthday,
+            ),
             TextFormField (
               initialValue: user.email,
               autocorrect: false,
@@ -55,16 +84,6 @@ class SignUpPageState extends State<SignUpPage> {
               ),
               validator: controller.validatePassword,
               onSaved: controller.savePassword,
-            ),
-            TextFormField (
-              initialValue: user.displayname,
-              autocorrect: false,
-              decoration: InputDecoration (
-                hintText: 'Name',
-                labelText: 'Display Name',
-              ),
-              validator: controller.validateDisplayName,
-              onSaved: controller.saveDisplayName,
             ),
             TextFormField (
               initialValue: '${user.zip}',

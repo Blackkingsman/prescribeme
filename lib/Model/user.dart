@@ -4,6 +4,9 @@ class User {
   String displayname;
   int zip;
   String uid;
+  String firstname;
+  String lastname;
+  DateTime birthday;
 
   User({
     this.email,
@@ -11,6 +14,9 @@ class User {
     this.displayname,
     this.zip,
     this.uid,
+    this.firstname,
+    this.lastname,
+    this.birthday,
   });
 
   Map<String, dynamic> serialize() {
@@ -19,6 +25,9 @@ class User {
       DISPLAYNAME: displayname,
       ZIP: zip,
       UID: uid,
+      FIRSTNAME: firstname,
+      LASTNAME: lastname,
+      BIRTHDAY: birthday,
     };
   }
 
@@ -28,6 +37,9 @@ class User {
       displayname: document[DISPLAYNAME],
       zip: document[ZIP],
       uid: document[UID],
+      firstname: document[FIRSTNAME],
+      lastname: document[LASTNAME],
+      birthday: document[BIRTHDAY],
     );
   }
 
@@ -36,5 +48,8 @@ class User {
   static const DISPLAYNAME = 'displayname';
   static const ZIP = 'zip';
   static const UID = 'uid';
+  static const FIRSTNAME = 'firstname';
+  static const LASTNAME = 'lastname';
+  static const BIRTHDAY = 'birthday';
 
 }

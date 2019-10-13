@@ -12,9 +12,5 @@ public final class BuildConfig {
   public static final String VERSION_NAME = "";
   // Fields from default config.
   public static final String LIBRARY_NAME = "flutter-fire-fst";
-<<<<<<< HEAD
-  public static final String LIBRARY_VERSION = "0.12.9-4";
-=======
   public static final String LIBRARY_VERSION = "0.12.9-5";
->>>>>>> c608df29218908d3f85a8f6ba6d6c34de0998352
 }

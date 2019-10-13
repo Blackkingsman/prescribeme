@@ -2,12 +2,58 @@ import '../View/signuppage.dart';
 import './myfirebase.dart';
 import '../View/mydialog.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class SignUpPageController {
 
   SignUpPageState state;
 
   SignUpPageController(this.state);
+
+
+  String validateFirstName(String value) {
+    if (value == null) {
+      return 'Enter a first name';
+    }
+    if(!value.contains(RegExp(r'^[a-zA-Z-]+$'))){
+      return 'Please remove all special characters';
+    }
+    
+    return null;
+  }
+  void saveFirstName(String value) {
+    state.user.firstname = value;
+  }
+
+  String validateLastName(String value) {
+    if (value == null) {
+      return 'Enter a last name';
+    }
+    if(!value.contains(RegExp(r'^[a-zA-Z-]+$'))){
+      return 'Please remove all special characters';
+    }
+    
+    return null;
+  }
+  void saveLastName(String value) {
+    state.user.lastname = value;
+  }
+
+  /* void saveBirthday () async {
+           DateTime selected = await showDatePicker(
+              context: state.context,
+              initialDate: _dateTime == null ? DateTime.now() : _dateTime,
+              firstDate: DateTime(1990),
+              lastDate: DateTime(2021)
+                ).then((date) {
+                setState(() {
+                _dateTime = date;
+                  });
+                });
+  }
+  */
+
+
 
   String validateEmail(String value) {
     if (value == null || !value.contains('.') || !value.contains('@')) {
@@ -29,15 +75,6 @@ String validatePassword(String value) {
     state.user.password = value;
   }
 
-String validateDisplayName(String value) {
-    if (value == null || value.length < 3) {
-      return 'Enter a valid display name (3 chars)';
-    }
-    return null;
-  }
-  void saveDisplayName(String value) {
-    state.user.displayname = value;
-  }
 
 String validateZip(String value) {
     if (value == null || value.length != 5) {

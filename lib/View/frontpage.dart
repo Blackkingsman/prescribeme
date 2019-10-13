@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../Controller/frontpage_controller.dart';
 import '../Model/user.dart';
-import '../View/learnmore.dart';
 
 class FrontPage extends StatefulWidget {
   @override
@@ -30,21 +29,13 @@ void stateChanged(Function fn) {
     this.context = context;
     return  Scaffold (
       appBar: AppBar (
-        title: Text("Prescibe Me"),
+        title: Text("Prescibe Me", style: TextStyle(color: Colors.black),),
         backgroundColor: Colors.lightGreen,
         actions: <Widget> [
           FlatButton.icon(
             icon: Icon(Icons.people, color: Colors.black,),
             label: Text('Create Account', style: TextStyle(color: Colors.black),),
             onPressed: controller.createAccount,
-          ),
-          IconButton (
-            icon: Icon(Icons.star),
-            onPressed: (){
-              Navigator.push(context, MaterialPageRoute (
-                builder: (BuildContext context) {return LearnMore();}
-              ));
-            },
           ),
         ],
       ),
