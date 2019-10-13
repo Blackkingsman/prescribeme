@@ -31,10 +31,11 @@ void stateChanged(Function fn) {
     return  Scaffold (
       appBar: AppBar (
         title: Text("Prescibe Me"),
+        backgroundColor: Colors.lightGreen,
         actions: <Widget> [
           FlatButton.icon(
-            icon: Icon(Icons.people, color: Colors.white,),
-            label: Text('Create Account', style: TextStyle(color: Colors.white),),
+            icon: Icon(Icons.people, color: Colors.black,),
+            label: Text('Create Account', style: TextStyle(color: Colors.black),),
             onPressed: controller.createAccount,
           ),
           IconButton (
