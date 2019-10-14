@@ -39,19 +39,19 @@ class SignUpPageController {
     state.user.lastname = value;
   }
 
-  /* void saveBirthday () async {
-           DateTime selected = await showDatePicker(
+   void saveBirthday () async {
+           DateTime selecteddate = DateTime.now();
+           DateTime pick = await showDatePicker(
               context: state.context,
-              initialDate: _dateTime == null ? DateTime.now() : _dateTime,
+              initialDate: selecteddate,
               firstDate: DateTime(1990),
               lastDate: DateTime(2021)
-                ).then((date) {
-                setState(() {
-                _dateTime = date;
-                  });
-                });
+              );
+        if(pick != null && pick !=selecteddate) 
+        state.user.birthday = pick;
+            
   }
-  */
+  
 
 
 
@@ -123,12 +123,13 @@ String validateZip(String value) {
       );
     }
 
-   try {
+  /* try {
    MyFirebase.creatProfile(state.user);
    } catch (e) {
      state.user.displayname = null;
      state.user.zip = null;
     }
+    */
     MyDialog.info (
         context: state.context,
         title: 'Account Created Successfully!',

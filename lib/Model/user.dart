@@ -1,7 +1,6 @@
 class User {
   String email;
   String password;
-  String displayname;
   int zip;
   String uid;
   String firstname;
@@ -11,7 +10,6 @@ class User {
   User({
     this.email,
     this.password,
-    this.displayname,
     this.zip,
     this.uid,
     this.firstname,
@@ -22,7 +20,6 @@ class User {
   Map<String, dynamic> serialize() {
     return <String, dynamic> {
       EMAIL: email,
-      DISPLAYNAME: displayname,
       ZIP: zip,
       UID: uid,
       FIRSTNAME: firstname,
@@ -34,7 +31,6 @@ class User {
   static User deserialize(Map<String, dynamic> document) {
     return User (
       email: document[EMAIL],
-      displayname: document[DISPLAYNAME],
       zip: document[ZIP],
       uid: document[UID],
       firstname: document[FIRSTNAME],
@@ -45,7 +41,6 @@ class User {
 
   static const PROFILE_COLLETION = 'userprofile';
   static const EMAIL = 'email';
-  static const DISPLAYNAME = 'displayname';
   static const ZIP = 'zip';
   static const UID = 'uid';
   static const FIRSTNAME = 'firstname';

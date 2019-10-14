@@ -56,10 +56,11 @@ void stateChanged(Function fn) {
         drawer: Drawer (
           child: ListView (
             children: <Widget> [
-              UserAccountsDrawerHeader (
-                accountName: Text(user.displayname),
-                accountEmail: Text(user.email),
-              ),
+            // UserAccountsDrawerHeader (
+               // accountName: Text(user.displayname),
+               // accountEmail: Text(user.email),
+             // ),
+              
               ListTile (
                 leading: Icon(Icons.people),
                 title: Text('Shared with me'),

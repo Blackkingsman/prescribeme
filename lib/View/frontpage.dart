@@ -28,6 +28,7 @@ void stateChanged(Function fn) {
   Widget build(BuildContext context) {
     this.context = context;
     return  Scaffold (
+      backgroundColor: Colors.black,
       appBar: AppBar (
         title: Text("Prescibe Me", style: TextStyle(color: Colors.black),),
         backgroundColor: Colors.lightGreen,
@@ -45,8 +46,11 @@ void stateChanged(Function fn) {
           children: <Widget> [
             TextFormField (
               initialValue: user.email,
+              style: TextStyle(color: Colors.white),
               decoration: InputDecoration (
+                labelStyle: TextStyle(color: Colors.white),
                 labelText: 'Enter email as login name',
+                hintStyle: TextStyle(color: Colors.white),
                 hintText: 'email',
               ),
               keyboardType: TextInputType.emailAddress,
@@ -56,8 +60,11 @@ void stateChanged(Function fn) {
             TextFormField (
               initialValue: user.password,
               obscureText: true,
+              style: TextStyle(color: Colors.white),
               decoration: InputDecoration (
+                labelStyle: TextStyle(color: Colors.white),
                 labelText: 'Enter password',
+                hintStyle: TextStyle(color: Colors.white),
                 hintText: 'password',
               ),
               validator: controller.validatePassword,
@@ -65,6 +72,8 @@ void stateChanged(Function fn) {
             ),
             RaisedButton (
               child: Text('Log in'),
+              textColor: Colors.black,
+              color: Colors.lightGreen,
               onPressed: controller.login,
             ),
           ],

@@ -69,7 +69,7 @@ void createAccount() {
     try {
     User user = await MyFirebase.readProfile(state.user.uid);
     //User user = await MyFirebase.readProfile('G3SmpW8GoMR8X5Y2sdFxjG4l6g52');
-    state.user.displayname = user.displayname;
+    //state.user.displayname = user.displayname;
     state.user.zip = user.zip;
     } catch (e) {
       print('*****READPROFILE' + e.toString());
