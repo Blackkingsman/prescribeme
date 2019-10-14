@@ -65,6 +65,19 @@ class SignUpPageState extends State<SignUpPage> {
               validator: controller.validateLastName,
               onSaved: controller.saveLastName,
             ),
+            TextFormField (
+              initialValue: user.gender,
+              autocorrect: false,
+              style: TextStyle(color: Colors.white),
+              decoration: InputDecoration (
+                hintText: 'Gender',
+                labelText: 'Gender',
+                labelStyle: TextStyle(color: Colors.white),
+                hintStyle: TextStyle(color: Colors.white),
+              ),
+              validator: controller.validateGender,
+              onSaved: controller.saveGender,
+            ),
             RaisedButton(
               child: Text('Choose your date of birth'),
               textColor: Colors.black,
@@ -111,6 +124,20 @@ class SignUpPageState extends State<SignUpPage> {
               ),
               validator: controller.validateZip,
               onSaved: controller.saveZip,
+            ),
+            TextFormField (
+              initialValue: '${user.number}',
+              autocorrect: false,
+              style: TextStyle(color: Colors.white),
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration (
+                hintText: 'Number',
+                labelText: 'Number',
+                labelStyle: TextStyle(color: Colors.white),
+                hintStyle: TextStyle(color: Colors.white),
+              ),
+              validator: controller.validateNumber,
+              onSaved: controller.saveNumber,
             ),
             RaisedButton (
               child: Text('Create Account'),

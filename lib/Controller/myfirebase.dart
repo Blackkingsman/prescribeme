@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import '../Model/book.dart';
 
 class MyFirebase {
+  
 
 static Future<String> createAccount({String email, String password}) async {
   AuthResult auth = await FirebaseAuth.instance.createUserWithEmailAndPassword (
@@ -20,6 +21,9 @@ static Future<String> createAccount({String email, String password}) async {
               .document(user.uid)
               .setData(user.serialize());
   }
+
+  
+  
 
   static Future<String> login({String email, String password}) async {
     AuthResult auth = await FirebaseAuth.instance.signInWithEmailAndPassword (

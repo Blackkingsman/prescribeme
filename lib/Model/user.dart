@@ -2,10 +2,12 @@ class User {
   String email;
   String password;
   int zip;
+  int number;
   String uid;
   String firstname;
   String lastname;
   DateTime birthday;
+  String gender;
 
   User({
     this.email,
@@ -15,6 +17,8 @@ class User {
     this.firstname,
     this.lastname,
     this.birthday,
+    this.number,
+    this.gender,
   });
 
   Map<String, dynamic> serialize() {
@@ -25,6 +29,8 @@ class User {
       FIRSTNAME: firstname,
       LASTNAME: lastname,
       BIRTHDAY: birthday,
+      NUMBER: number,
+      GENDER: gender,
     };
   }
 
@@ -36,6 +42,8 @@ class User {
       firstname: document[FIRSTNAME],
       lastname: document[LASTNAME],
       birthday: document[BIRTHDAY],
+      number: document[NUMBER],
+      gender: document[GENDER],
     );
   }
 
@@ -46,5 +54,7 @@ class User {
   static const FIRSTNAME = 'firstname';
   static const LASTNAME = 'lastname';
   static const BIRTHDAY = 'birthday';
+  static const NUMBER = 'number';
+  static const GENDER = 'gender';
 
 }

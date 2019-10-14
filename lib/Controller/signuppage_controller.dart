@@ -2,7 +2,6 @@ import '../View/signuppage.dart';
 import './myfirebase.dart';
 import '../View/mydialog.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 class SignUpPageController {
 
@@ -45,15 +44,12 @@ class SignUpPageController {
               context: state.context,
               initialDate: selecteddate,
               firstDate: DateTime(1990),
-              lastDate: DateTime(2021)
+              lastDate: DateTime(2019,12,31),
               );
         if(pick != null && pick !=selecteddate) 
         state.user.birthday = pick;
             
   }
-  
-
-
 
   String validateEmail(String value) {
     if (value == null || !value.contains('.') || !value.contains('@')) {
@@ -63,6 +59,17 @@ class SignUpPageController {
   }
   void saveEmail(String value) {
     state.user.email = value;
+  }
+
+
+  String validateGender(String value) {
+    if (value == null) {
+      return 'Enter a valid gender';
+    }
+    return null;
+  }
+  void saveGender(String value) {
+    state.user.gender = value;
   }
 
 String validatePassword(String value) {
@@ -94,6 +101,24 @@ String validateZip(String value) {
     state.user.zip = int.parse(value);
   }
 
+  String validateNumber(String value) {
+    if (value == null || value.length != 10) {
+      return 'Enter a valid number';
+    }
+    try {
+      int n = int.parse(value);
+      if (n < 10000) {
+        return '9 digit number needed';
+      }
+    } catch (e) {
+      return '9 digit number needed';
+    }
+    return null;
+  }
+  void saveNumber(String value) {
+    state.user.zip = int.parse(value);
+  }
+
   void createAccount() async {
     if (!state.formKey.currentState.validate()) {
       return;
@@ -122,14 +147,6 @@ String validateZip(String value) {
         action: () => Navigator.pop(state.context),
       );
     }
-
-  /* try {
-   MyFirebase.creatProfile(state.user);
-   } catch (e) {
-     state.user.displayname = null;
-     state.user.zip = null;
-    }
-    */
     MyDialog.info (
         context: state.context,
         title: 'Account Created Successfully!',
