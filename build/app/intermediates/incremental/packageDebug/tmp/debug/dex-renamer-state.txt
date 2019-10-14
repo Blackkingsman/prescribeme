@@ -1,10 +1,10 @@
-#Sun Oct 13 20:05:49 CDT 2019
+#Sun Oct 13 22:10:40 CDT 2019
 path.2=classes3.dex
 path.1=classes2.dex
 path.0=classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.2=/Users/upasna/Documents/Mobile Apps/PrescribeMe/build/app/intermediates/transforms/dexMerger/debug/0
-base.1=/Users/upasna/Documents/Mobile Apps/PrescribeMe/build/app/intermediates/transforms/dexMerger/debug/0
-base.0=/Users/upasna/Documents/Mobile Apps/PrescribeMe/build/app/intermediates/transforms/dexMerger/debug/0
+base.2=C\:\\Users\\tdphi\\OneDrive - University of Central Oklahoma\\Desktop\\prescribeme\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+base.1=C\:\\Users\\tdphi\\OneDrive - University of Central Oklahoma\\Desktop\\prescribeme\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+base.0=C\:\\Users\\tdphi\\OneDrive - University of Central Oklahoma\\Desktop\\prescribeme\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0

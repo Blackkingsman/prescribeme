@@ -102,17 +102,10 @@ String validateZip(String value) {
   }
 
   String validateNumber(String value) {
-    if (value == null || value.length != 10) {
+    if (value == null || value.length !=14) {
       return 'Enter a valid number';
     }
-    try {
-      int n = int.parse(value);
-      if (n < 10000) {
-        return '9 digit number needed';
-      }
-    } catch (e) {
-      return '9 digit number needed';
-    }
+
     return null;
   }
   void saveNumber(String value) {

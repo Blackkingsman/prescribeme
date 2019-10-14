@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../Controller/signuppage_controller.dart';
 import '../Model/user.dart';
-
+import '../Controller/formatters.dart';
+import 'package:intl/intl.dart';
 
 class SignUpPage extends StatefulWidget {
   @override
@@ -11,7 +13,7 @@ class SignUpPage extends StatefulWidget {
 }
 
 class SignUpPageState extends State<SignUpPage> {
-
+final _mobileFormatter = NumberTextInputFormatter();
 
   SignUpPageController controller;
   BuildContext context;
@@ -129,6 +131,11 @@ class SignUpPageState extends State<SignUpPage> {
               initialValue: '${user.number}',
               autocorrect: false,
               style: TextStyle(color: Colors.white),
+              maxLength: 14,
+              inputFormatters: <TextInputFormatter>[
+                WhitelistingTextInputFormatter.digitsOnly,
+                _mobileFormatter,
+          ],
               keyboardType: TextInputType.number,
               decoration: InputDecoration (
                 hintText: 'Number',
