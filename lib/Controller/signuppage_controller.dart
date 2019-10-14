@@ -11,10 +11,10 @@ class SignUpPageController {
 
 
   String validateFirstName(String value) {
-    if (value == null) {
+    if (value == null || value.length == 0) {
       return 'Enter a first name';
     }
-    if(!value.contains(RegExp(r'^[a-zA-Z-]+$'))){
+    if(value.length != 0 &&!value.contains(RegExp(r'^[a-zA-Z-]+$'))){
       return 'Please remove all special characters';
     }
     
@@ -25,10 +25,10 @@ class SignUpPageController {
   }
 
   String validateLastName(String value) {
-    if (value == null) {
+    if (value == null || value.length == 0) {
       return 'Enter a last name';
     }
-    if(!value.contains(RegExp(r'^[a-zA-Z-]+$'))){
+    if(value.length != 0 &&!value.contains(RegExp(r'^[a-zA-Z-]+$'))){
       return 'Please remove all special characters';
     }
     
