@@ -109,7 +109,7 @@ String validateZip(String value) {
     return null;
   }
   void saveNumber(String value) {
-    state.user.zip = int.parse(value);
+    state.user.number = value;
   }
 
   void createAccount() async {

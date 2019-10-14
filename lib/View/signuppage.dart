@@ -14,7 +14,9 @@ class SignUpPage extends StatefulWidget {
 
 class SignUpPageState extends State<SignUpPage> {
 final _mobileFormatter = NumberTextInputFormatter();
-
+var genders = ['Male', 'Female', 'Prefer not to say'];
+var selectedvalue;
+DateTime _dateTime;
   SignUpPageController controller;
   BuildContext context;
   var formKey= GlobalKey<FormState>();
@@ -27,7 +29,16 @@ final _mobileFormatter = NumberTextInputFormatter();
   void stateChanged(Function fn) {
     setState(fn);
   }
-
+  void _onDropDownChanged(String val) {
+    setState(() {
+      this.selectedvalue = val;
+    });
+  }
+  void _onBirthdayChanged(DateTime val){
+    setState(() {
+     this._dateTime = val; 
+    });
+  }
   @override
   Widget build(BuildContext context) {
     this.context = context;
@@ -67,7 +78,29 @@ final _mobileFormatter = NumberTextInputFormatter();
               validator: controller.validateLastName,
               onSaved: controller.saveLastName,
             ),
-            TextFormField (
+           Theme(
+             data: new ThemeData(
+               canvasColor: Colors.black,
+                primaryColor: Colors.black,
+                accentColor: Colors.black,
+                 hintColor: Colors.black),
+             child: DropdownButton<String>( 
+               items: genders.map((String dropDownStringITem){
+                 return DropdownMenuItem<String>(
+                    value: dropDownStringITem,
+                    child: Text(dropDownStringITem),
+                    
+                 );
+               }).toList(),
+               style: TextStyle(color: Colors.white),
+               value: selectedvalue,
+               onChanged:(String val) {
+              _onDropDownChanged(val);
+          },
+               hint: Text('Select Gender', style: TextStyle(color: Colors.white),)
+             ),
+           ),
+            /*TextFormField (
               initialValue: user.gender,
               autocorrect: false,
               style: TextStyle(color: Colors.white),
@@ -79,7 +112,7 @@ final _mobileFormatter = NumberTextInputFormatter();
               ),
               validator: controller.validateGender,
               onSaved: controller.saveGender,
-            ),
+            ),*/
             RaisedButton(
               child: Text('Choose your date of birth'),
               textColor: Colors.black,
@@ -128,7 +161,7 @@ final _mobileFormatter = NumberTextInputFormatter();
               onSaved: controller.saveZip,
             ),
             TextFormField (
-              initialValue: '${user.number}',
+              initialValue: user.number,
               autocorrect: false,
               style: TextStyle(color: Colors.white),
               maxLength: 14,

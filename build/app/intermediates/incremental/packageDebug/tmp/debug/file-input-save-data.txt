@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Oct 13 22:10:40 CDT 2019
+#Mon Oct 14 00:15:21 CDT 2019
 4.path=flutter_assets/assets/images/books.jpg
 13.baseType=DIRECTORY
 8.set=DEX

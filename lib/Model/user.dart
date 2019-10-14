@@ -2,7 +2,7 @@ class User {
   String email;
   String password;
   int zip;
-  int number;
+  String number;
   String uid;
   String firstname;
   String lastname;
