@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import '../Controller/signuppage_controller.dart';
 import '../Model/user.dart';
 import '../Controller/formatters.dart';
-import 'package:intl/intl.dart';
 
 class SignUpPage extends StatefulWidget {
   @override
@@ -100,19 +99,6 @@ DateTime _dateTime;
                hint: Text('Select Gender', style: TextStyle(color: Colors.white),)
              ),
            ),
-            /*TextFormField (
-              initialValue: user.gender,
-              autocorrect: false,
-              style: TextStyle(color: Colors.white),
-              decoration: InputDecoration (
-                hintText: 'Gender',
-                labelText: 'Gender',
-                labelStyle: TextStyle(color: Colors.white),
-                hintStyle: TextStyle(color: Colors.white),
-              ),
-              validator: controller.validateGender,
-              onSaved: controller.saveGender,
-            ),*/
             RaisedButton(
               child: Text('Choose your date of birth'),
               textColor: Colors.black,

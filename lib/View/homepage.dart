@@ -43,9 +43,11 @@ void stateChanged(Function fn) {
     return WillPopScope (
       onWillPop: (){return Future.value(false);},
           child: Scaffold (
-        appBar: AppBar (
-          title: Text('User Home'),
-          actions: deleteIndices == null ? null : <Widget> [
+            backgroundColor: Colors.black,
+            appBar: AppBar (
+              title: Text("User Homepage - Prescriptions", style: TextStyle(color: Colors.black),),
+              backgroundColor: Colors.lightGreen,
+              actions: deleteIndices == null ? null : <Widget> [
             FlatButton.icon (
               label: Text('Delete'),
               icon: Icon(Icons.delete),
@@ -56,20 +58,30 @@ void stateChanged(Function fn) {
         drawer: Drawer (
           child: ListView (
             children: <Widget> [
-            // UserAccountsDrawerHeader (
-               // accountName: Text(user.displayname),
-               // accountEmail: Text(user.email),
-             // ),
-              
+              UserAccountsDrawerHeader (
+                accountName: Text('Terry Phillips'),
+                accountEmail: Text('tphillips24@uco.edu'),
+                currentAccountPicture: Image.asset('assets/images/random.jpg'),
+              ),
               ListTile (
-                leading: Icon(Icons.people),
-                title: Text('Shared with me'),
+                leading: Icon(Icons.store),
+                title: Text('Nearest Pharamcy'),
                 onTap: controller.sharedWithMeMenu,
               ),
               ListTile (
-                leading: Icon(Icons.people),
+                leading: Icon(Icons.person_outline),
                 title: Text('Profile'),
                 onTap: controller.profilePage,
+              ),
+              ListTile (
+                leading: Icon(Icons.calendar_today),
+                title: Text('Make an Appointment'),
+                onTap: (){}
+                ),
+                ListTile (
+                leading: Icon(Icons.info),
+                title: Text('Medical Information'),
+                onTap: (){}
               ),
               ListTile (
                 leading: Icon(Icons.exit_to_app),
@@ -113,5 +125,4 @@ void stateChanged(Function fn) {
       ),
     );
   }
-
 }
