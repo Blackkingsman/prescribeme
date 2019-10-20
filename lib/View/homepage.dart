@@ -47,6 +47,7 @@ void stateChanged(Function fn) {
             appBar: AppBar (
               title: Text("User Homepage - Prescriptions", style: TextStyle(color: Colors.black),),
               backgroundColor: Colors.lightGreen,
+              iconTheme: new IconThemeData(color:Colors.black),
               actions: deleteIndices == null ? null : <Widget> [
             FlatButton.icon (
               label: Text('Delete'),
@@ -55,40 +56,46 @@ void stateChanged(Function fn) {
             ),
           ],
         ),
-        drawer: Drawer (
-          child: ListView (
-            children: <Widget> [
-              UserAccountsDrawerHeader (
-                accountName: Text('Terry Phillips'),
-                accountEmail: Text('tphillips24@uco.edu'),
-                currentAccountPicture: Image.asset('assets/images/random.jpg'),
-              ),
-              ListTile (
-                leading: Icon(Icons.store),
-                title: Text('Nearest Pharamcy'),
-                onTap: controller.sharedWithMeMenu,
-              ),
-              ListTile (
-                leading: Icon(Icons.person_outline),
-                title: Text('Profile'),
-                onTap: controller.profilePage,
-              ),
-              ListTile (
-                leading: Icon(Icons.calendar_today),
-                title: Text('Make an Appointment'),
-                onTap: (){}
+        drawer:  Drawer (
+          child: Container(
+            color: Colors.lightGreen,
+            child: ListView (
+              children: <Widget> [
+                UserAccountsDrawerHeader (
+                  decoration: BoxDecoration(
+                    color: Colors.black
+                  ),
+                  accountName: Text('Terry Phillips'),
+                  accountEmail: Text('tphillips24@uco.edu'),
+                  currentAccountPicture: Image.asset('assets/images/random.jpg'),
                 ),
                 ListTile (
-                leading: Icon(Icons.info),
-                title: Text('Medical Information'),
-                onTap: (){}
-              ),
-              ListTile (
-                leading: Icon(Icons.exit_to_app),
-                title: Text('Sign Out'),
-                onTap: controller.signOut,
-              ),
-            ],
+                  leading: Icon(Icons.store),
+                  title: Text('Nearest Pharamcy'),
+                  onTap: controller.sharedWithMeMenu,
+                ),
+                ListTile (
+                  leading: Icon(Icons.person_outline),
+                  title: Text('Profile'),
+                  onTap: controller.profilePage,
+                ),
+                ListTile (
+                  leading: Icon(Icons.calendar_today),
+                  title: Text('Make an Appointment'),
+                  onTap: (){}
+                  ),
+                  ListTile (
+                  leading: Icon(Icons.info),
+                  title: Text('Medical Information'),
+                  onTap: (){}
+                ),
+                ListTile (
+                  leading: Icon(Icons.exit_to_app),
+                  title: Text('Sign Out'),
+                  onTap: controller.signOut,
+                ),
+              ],
+            ),
           ),
         ),
         floatingActionButton: FloatingActionButton (
