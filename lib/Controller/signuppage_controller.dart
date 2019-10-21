@@ -73,7 +73,7 @@ class SignUpPageController {
   }
 
 String validatePassword(String value) {
-    if (value == null) {
+    if (value == null || value.length < 3) {
       return 'Enter a valid password';
     }
     return null;
@@ -113,38 +113,42 @@ String validateZip(String value) {
   }
 
   void createAccount() async {
-    if (!state.formKey.currentState.validate()) {
+    if(!state.formKey.currentState.validate()){
       return;
     }
-
     state.formKey.currentState.save();
-    try {
-      state.user.uid = await MyFirebase.createAccount (
+
+    //using email/password: sign up an account at Firebase
+    try{
+      state.user.uid = await MyFirebase.createAccount(
       email: state.user.email,
-      password: state.user.password,
-    );
-
-    MyFirebase.creatProfile(state.user);
-
-    MyDialog.info (
-        context: state.context,
-        title: 'Account Created Successfully!',
-        message: 'Your account is Created with ${state.user.email}',
-        action: () => Navigator.pop(state.context),
+      password: state.user.password
       );
-    } catch (e) {
-      MyDialog.info (
+
+    }catch(e){
+      MyDialog.info(
         context: state.context,
-        title: 'The Account creation failed!',
-        message: e.message != null ? e.message : e.toString(),
-        action: () => Navigator.pop(state.context),
+        title: 'Account creation failed!',
+        message: e.message !=null ? e.message: e.toString(),
+        action: ()=> Navigator.pop(state.context),
       );
+
+      return;// do not proceed
     }
-    MyDialog.info (
+  
+// create user profile
+    try{
+      MyFirebase.creatProfile(state.user);
+    } catch(e){
+      state.user.zip = null;
+    }
+     MyDialog.info(
         context: state.context,
         title: 'Account Created Successfully!',
-        message: 'Your account is Created with ${state.user.email}',
-        action: () => Navigator.pop(state.context),
-      );
+        message:'Your account is created with ${state.user.email}',
+        action: ()=> Navigator.pop(state.context),
+      ); 
+
   }
+
 }

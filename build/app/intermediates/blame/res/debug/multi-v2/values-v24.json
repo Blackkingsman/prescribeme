@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/upasna/Documents/Mobile Apps/project/prescribeme/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "D:\\MobileApps\\prescribeme\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/upasna/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/ab9e51057ef7f54a8120f82524bdc135/res/values-v24/values-v24.xml",
+                    "source": "C:\\Users\\tdphi\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\f459548d98225f43deec630d4bb50dd5\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
