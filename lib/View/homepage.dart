@@ -99,7 +99,8 @@ void stateChanged(Function fn) {
           ),
         ),
         floatingActionButton: FloatingActionButton (
-          child: Icon(Icons.add),
+          backgroundColor: Colors.lightGreen,
+          child: Icon(Icons.add, color: Colors.black),
           onPressed: controller.addButton,
         ),
         body: ListView.builder(
