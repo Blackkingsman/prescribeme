@@ -40,21 +40,21 @@ BookPageState(this.user, this.book) {
   Widget build(BuildContext context) {
     return Scaffold (
       appBar: AppBar (
-        title: Text('Book Detail'),
+        title: Text('Prescription'),
       ),
       body: Form (
         key: formKey,
         child: ListView (
           children: <Widget> [
-            CachedNetworkImage(
+            /*CachedNetworkImage(
               imageUrl: bookCopy.imageUrl,
               placeholder: (context, url) => CircularProgressIndicator(),
               errorWidget: (context, url, error) => 
-                            Icon(Icons.error_outline, size: 250),
+              Icon(Icons.error_outline, size: 250),
               height: 250,
               width: 250,
-            ),
-            TextFormField (
+            ),*/
+            /*TextFormField (
               initialValue: bookCopy.imageUrl,
               decoration: InputDecoration (
                 labelText: 'Image Url',
@@ -62,17 +62,17 @@ BookPageState(this.user, this.book) {
               autocorrect: false,
               validator: controller.validateImageUrl,
               onSaved: controller.saveImageUrl,
-            ),
+            ),*/
              TextFormField (
               initialValue: bookCopy.title,
               decoration: InputDecoration (
-                labelText: 'Title',
+                labelText: 'Title of Prescription',
               ),
               autocorrect: false,
               validator: controller.validateTitle,
               onSaved: controller.saveTitle,
             ),
-            TextFormField (
+            /*TextFormField (
               initialValue: bookCopy.author,
               decoration: InputDecoration (
                 labelText: 'Author',
@@ -80,8 +80,8 @@ BookPageState(this.user, this.book) {
               autocorrect: false,
               validator: controller.validateAuthor,
               onSaved: controller.saveAuthor,
-            ),
-             TextFormField (
+            ),*/
+             /*TextFormField (
               initialValue: '${bookCopy.pubyear}',
               decoration: InputDecoration (
                 labelText: 'Pub Year',
@@ -89,8 +89,8 @@ BookPageState(this.user, this.book) {
               autocorrect: false,
               validator: controller.validatePubYear,
               onSaved: controller.savePubYear,
-            ),
-            TextFormField (
+            ),*/
+            /*TextFormField (
               initialValue: bookCopy.sharedWith.join(',').toString(),
               decoration: InputDecoration (
                 labelText: 'Shared with (comma seperated email list)',
@@ -98,7 +98,7 @@ BookPageState(this.user, this.book) {
               autocorrect: false,
               validator: controller.validateSharedWith,
               onSaved: controller.saveSharedWith,
-            ),
+            ),*/
             TextFormField (
               maxLines: 5,
               decoration: InputDecoration (
@@ -109,9 +109,9 @@ BookPageState(this.user, this.book) {
               validator: controller.validateReview,
               onSaved: controller.saveReview,
             ),
-            Text('Created By: ' + bookCopy.createdBy),
-            Text('Last Updated At: ' + bookCopy.lastUpdatedAt.toString()),
-            Text('Document: ' + bookCopy.documentId.toString()),
+            //Text('Created By: ' + bookCopy.createdBy),
+            //Text('Last Updated At: ' + bookCopy.lastUpdatedAt.toString()),
+            //Text('Document: ' + bookCopy.documentId.toString()),
             RaisedButton (
               child: Text('Save'),
               onPressed: controller.save,

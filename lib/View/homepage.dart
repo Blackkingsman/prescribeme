@@ -69,11 +69,11 @@ void stateChanged(Function fn) {
                   accountEmail: Text('tphillips24@uco.edu'),
                   currentAccountPicture: Image.asset('assets/images/random.jpg'),
                 ),
-                ListTile (
+                /*ListTile (
                   leading: Icon(Icons.store),
                   title: Text('Nearest Pharamcy'),
                   onTap: controller.sharedWithMeMenu,
-                ),
+                ),*/
                 ListTile (
                   leading: Icon(Icons.person_outline),
                   title: Text('Profile'),

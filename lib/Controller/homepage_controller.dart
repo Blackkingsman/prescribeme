@@ -80,7 +80,7 @@ class HomePageController {
     });
   }
 
-  void sharedWithMeMenu() async {
+  /*void sharedWithMeMenu() async {
     List<Book> books = await MyFirebase.getBooksSharedWithMe(state.user.email);
     print('#: ' + books.length.toString());
     for (var book in books) {
@@ -91,7 +91,7 @@ class HomePageController {
       builder: (context) => SharedBooksPage(state.user, books),
     ));
     Navigator.pop(state.context);
-  }
+  }*/
 
   void profilePage() {
   Navigator.push(state.context, MaterialPageRoute(
