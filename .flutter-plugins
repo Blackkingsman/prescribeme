@@ -1,5 +1,6 @@
 cloud_firestore=/Users/upasna/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.12.9+5/
 firebase_auth=/Users/upasna/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.14.0+5/
 firebase_core=/Users/upasna/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.0+9/
+firebase_messaging=/Users/upasna/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-5.1.6/
 path_provider=/Users/upasna/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.4.0/
 sqflite=/Users/upasna/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-1.1.7+1/

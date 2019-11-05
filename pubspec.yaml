@@ -33,6 +33,7 @@ dev_dependencies:
   cloud_firestore: ^0.12.9+4
   cached_network_image: ^1.1.1
   flutter_datetime_picker: ^1.2.6
+  firebase_messaging: ^5.1.6
   intl: ^0.16.0
   
 

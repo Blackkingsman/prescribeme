@@ -11,6 +11,27 @@ final List<Book> booklist;
 
 HomePage(this.user, this.booklist);
 
+  //String textValue = 'Hello World';
+  /*FirebaseMessaging firebaseMessaging = new FirebaseMessaging();
+
+  @override
+  void initState() {
+    firebaseMessaging.configure(
+      onMessage: (Map<String, dynamic> message) {
+        print(message);
+      },
+      onLaunch: (Map<String, dynamic> message) {
+        print(message);
+      },
+      onResume: (Map<String, dynamic> message) {
+        print(message);
+      },
+    );
+    firebaseMessaging.getToken().then((token) {
+      print(token);
+    });
+  }*/
+
   @override
   State<StatefulWidget> createState() {
     return HomePageState(user, booklist);
@@ -69,6 +90,7 @@ void stateChanged(Function fn) {
                   accountEmail: Text('tphillips24@uco.edu'),
                   currentAccountPicture: Image.asset('assets/images/random.jpg'),
                 ),
+                
                 /*ListTile (
                   leading: Icon(Icons.store),
                   title: Text('Nearest Pharamcy'),
@@ -82,7 +104,7 @@ void stateChanged(Function fn) {
                 ListTile (
                   leading: Icon(Icons.calendar_today),
                   title: Text('Make an Appointment'),
-                  onTap: (){}
+                  onTap: controller.appointmentPage,
                   ),
                   ListTile (
                   leading: Icon(Icons.info),

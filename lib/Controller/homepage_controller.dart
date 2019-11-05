@@ -1,10 +1,10 @@
 import 'package:bookreview/Controller/myfirebase.dart';
 import 'package:bookreview/View/profilepage.dart';
+import 'package:bookreview/View/appointment.dart';
 import 'package:flutter/material.dart';
 import '../View/homepage.dart';
 import '../Model/book.dart';
 import '../View/bookpage.dart';
-import '../View/sharedBookspage.dart';
 
 class HomePageController {
   HomePageState state;
@@ -96,6 +96,12 @@ class HomePageController {
   void profilePage() {
   Navigator.push(state.context, MaterialPageRoute(
     builder: (context) => ProfilePage(),
+    ));
+  }
+
+  void appointmentPage() {
+  Navigator.push(state.context, MaterialPageRoute(
+    builder: (context) => AppointmentPage(),
     ));
   }
 }

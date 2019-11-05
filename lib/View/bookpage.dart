@@ -116,6 +116,10 @@ BookPageState(this.user, this.book) {
               child: Text('Save'),
               onPressed: controller.save,
             ),
+            RaisedButton (
+              child: Text('Order Now'),
+              onPressed: (){},
+            ),
           ],
         ),
       ),

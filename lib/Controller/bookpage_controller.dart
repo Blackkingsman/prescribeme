@@ -124,8 +124,5 @@ class BookPageController {
         },
       );
     }
-
-    // print('******* share with: ' + state.bookCopy.sharedWith.toString());
   }
-
 }
