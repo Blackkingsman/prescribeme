@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../Model/user.dart';
 import '../Model/book.dart';
 import '../Controller/homepage_controller.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 
 class HomePage extends StatefulWidget {
 
@@ -82,7 +81,7 @@ void stateChanged(Function fn) {
                 ListTile (
                   leading: Icon(Icons.calendar_today),
                   title: Text('Make an Appointment'),
-                  onTap: (){}
+                  onTap: controller.appointmentPage,
                   ),
                   ListTile (
                   leading: Icon(Icons.info),
@@ -107,19 +106,15 @@ void stateChanged(Function fn) {
           itemCount: booklist.length,
           itemBuilder: (BuildContext context, int index) {
             return Container(
-              padding: EdgeInsets.all(5.0),
+              padding: EdgeInsets.all(8.0),
+              
               color: deleteIndices != null && deleteIndices.contains(index) ? Colors.cyan[200] : Colors.white,
                 child: ListTile(
-                leading: CachedNetworkImage(
-                  imageUrl: booklist[index].imageUrl,
-                  placeholder: (context, url) => CircularProgressIndicator(),
-                  errorWidget: (context, url, error) => Icon(Icons.error_outline),
-                ),
                 title: Text(booklist[index].title),
                 subtitle: Column (
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget> [
-                    Text(booklist[index].documentId),
+                    
                     Text(booklist[index].author),
                     Text(booklist[index].pubyear.toString()),
                   ],

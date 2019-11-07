@@ -3,7 +3,7 @@ class Book {
 String documentId;
 String title;
 String author;
-int pubyear;
+String pubyear;
 String imageUrl;
 String review;
 String createdBy;
@@ -24,7 +24,7 @@ Book({
 Book.empty() {
   this.title = '';
   this.author = '';
-  this.pubyear = 2000;
+  this.pubyear = DateTime.now().toString();
   this.imageUrl = '';
   this.review = '';
   this.createdBy = '';
