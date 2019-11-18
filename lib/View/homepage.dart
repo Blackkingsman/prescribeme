@@ -86,7 +86,7 @@ void stateChanged(Function fn) {
                   ListTile (
                   leading: Icon(Icons.info),
                   title: Text('Medical Information'),
-                  onTap: (){}
+                  onTap: controller.medicalPage,
                 ),
                 ListTile (
                   leading: Icon(Icons.exit_to_app),

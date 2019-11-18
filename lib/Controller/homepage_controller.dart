@@ -1,6 +1,7 @@
 import 'package:bookreview/Controller/myfirebase.dart';
 import 'package:bookreview/View/profilepage.dart';
 import 'package:flutter/material.dart';
+import '../View/medicalpage.dart';
 import '../View/homepage.dart';
 import '../Model/book.dart';
 import '../View/prescriptionpage.dart';
@@ -100,6 +101,12 @@ class HomePageController {
   void appointmentPage() {
   Navigator.push(state.context, MaterialPageRoute(
     builder: (context) =>  AppointmentPage(),
+    ));
+  }
+
+   void medicalPage() {
+  Navigator.push(state.context, MaterialPageRoute(
+    builder: (context) =>  MedicalPage(),
     ));
   }
 }
