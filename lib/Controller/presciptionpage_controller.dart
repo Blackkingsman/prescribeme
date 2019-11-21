@@ -26,7 +26,23 @@ class PresciptionPageController {
     }
     return null;
   }
-
+void RefillButtonPressed() {
+    showDialog(
+      context: state.context,
+      builder: (context) {
+        return AlertDialog (
+          title: Text('Refill Requested'),
+          content: Text("Prescription: "+state.book.title+ "\nPlease allow atleast 24hrs for review by your doctor"),
+          actions: <Widget> [
+            RaisedButton(
+              child: Text('OK', style: TextStyle(color: Colors.white),),
+              onPressed: () => Navigator.of(state.context).pop(),
+            ),
+          ],
+        );
+      }
+    );
+}
   void saveTitle(String value) {
     state.bookCopy.title = value;
   }

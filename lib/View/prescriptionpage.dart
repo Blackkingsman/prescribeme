@@ -89,6 +89,8 @@ PresciptionPageState(this.user, this.book) {
               child: Text('Save'),
               onPressed: controller.save,
             ),
+            RaisedButton(child: Text('Request to Refill'),
+             onPressed: controller.RefillButtonPressed,),
           ],
         ),
       ),

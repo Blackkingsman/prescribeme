@@ -125,7 +125,22 @@ void stateChanged(Function fn) {
 
                 // Then show a snackbar.
                 Scaffold.of(context)
-                    .showSnackBar(SnackBar(content: Text(booklist[index].title.toString()+"dismissed")));
+                    .showSnackBar(
+                    SnackBar(
+                      content: 
+                      Text(
+                          booklist[index].title.toString()+" Removed",
+                          style: 
+                          TextStyle(
+                            fontSize:20 ,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.red,
+                            ),
+                            textAlign: TextAlign.center,
+                          ), 
+                      ),
+                      
+                    );
               },
               // Show a red background as the item is swiped away.
               background: Container(color: Colors.red ),
