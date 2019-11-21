@@ -6,6 +6,7 @@ import '../View/homepage.dart';
 import '../Model/book.dart';
 import '../View/prescriptionpage.dart';
 import '../View/appointmentpage.dart';
+import '../View/refillpage.dart';
 
 class HomePageController {
   HomePageState state;
@@ -109,4 +110,11 @@ class HomePageController {
     builder: (context) =>  MedicalPage(),
     ));
   }
+
+  void refillPage() {
+    Navigator.push(state.context, MaterialPageRoute (
+      builder: (context) => RefillPage(),
+    ));
+  }
 }
+

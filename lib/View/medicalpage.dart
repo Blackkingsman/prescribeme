@@ -29,7 +29,6 @@ class MedicalPage extends StatelessWidget {
                     ),
                   ),
                 );
-
               },
               background: Container(
                 child: Icon(Icons.delete),
