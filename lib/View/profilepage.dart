@@ -10,7 +10,7 @@ class ProfilePage extends StatelessWidget {
         iconTheme: IconThemeData (
           color: Colors.black,
         ),
-        title: Text("Terry Phillips", style: TextStyle (
+        title: Text("One Two", style: TextStyle (
           fontWeight: FontWeight.bold,
           color: Colors.black,
           ),

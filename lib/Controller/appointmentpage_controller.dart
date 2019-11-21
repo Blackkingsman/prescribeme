@@ -25,29 +25,22 @@ void saveBirthday () async {
 
           state.changedate(pick);
   }
-}
-
-class AppointmentPageController_ {
-  AppointmentPage apptPage;
-  AppointmentPageController_(this.apptPage);
-
   void AppointmentButtonPressed() {
     showDialog(
-      context: apptPage.context,
+      context: state.context,
       builder: (context) {
         return AlertDialog (
-          title: Text('Mercy Hospital'),
-          content: Text('abcd'),
+          title: Text('Appointment Confirmation'),
+          content: Text( "Your appointment has been requested!"),
           actions: <Widget> [
             RaisedButton(
               child: Text('OK', style: TextStyle(color: Colors.white),),
-              onPressed: () {
-                Navigator.pop(apptPage.context);
-              },
+              onPressed: () => Navigator.of(state.context).pop(),
             ),
           ],
         );
       }
     );
-  }
+    
+}
 }

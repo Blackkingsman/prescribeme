@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MedicalPage extends StatelessWidget {
-  List<String> data = ["Asthma", "Mumps"];
+  List<String> data = ["Asthma", "Mumps", "Depression"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(

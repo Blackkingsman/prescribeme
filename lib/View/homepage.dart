@@ -51,8 +51,8 @@ void stateChanged(Function fn) {
             FlatButton.icon (
               label: Text('Delete'),
               icon: Icon(Icons.delete),
-              onPressed: (){},
-              //onPressed: controller.deleteButton,
+             
+              onPressed: controller.deleteButton,
             ),
           ],
         ),
@@ -65,8 +65,8 @@ void stateChanged(Function fn) {
                   decoration: BoxDecoration(
                     color: Colors.black
                   ),
-                  accountName: Text('Terry Phillips'),
-                  accountEmail: Text('tphillips24@uco.edu'),
+                  accountName: Text('One Two'),
+                  accountEmail: Text('1@uco.edu'),
                   currentAccountPicture: Image.asset('assets/images/random.jpg'),
                 ),
                 ListTile (
@@ -116,7 +116,7 @@ void stateChanged(Function fn) {
               direction: DismissDirection.endToStart,
               onDismissed: (direction) {
                 // Remove the item from the data source.
-                controller.deleteButton(index);
+                controller.deleteSwipe(index);
                 
 
                 // Then show a snackbar.
@@ -139,7 +139,12 @@ void stateChanged(Function fn) {
                     );
               },
               // Show a red background as the item is swiped away.
-              background: Container(color: Colors.red ),
+              background: Container(
+                child: Icon(Icons.delete),
+                color: Colors.red,
+                alignment: Alignment.centerRight,
+              ),
+              
               child: Container(
               padding: EdgeInsets.all(8.0),
               

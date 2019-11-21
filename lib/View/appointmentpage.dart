@@ -1,19 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import '../Controller/appointmentpage_controller.dart';
 import '../Model/user.dart';
 import '../Controller/formatters.dart';
-import '../Controller/homepage_controller.dart';
 
 
 class AppointmentPage extends StatefulWidget {
 
-  AppointmentPageController_ controller;
-  BuildContext context;
-
-  AppointmentPage() {
-    controller = AppointmentPageController_(this);
-  }
 
   @override
   State<StatefulWidget> createState() {
@@ -23,8 +15,8 @@ class AppointmentPage extends StatefulWidget {
 
 class AppointmentPageState extends State<AppointmentPage> {
 final _mobileFormatter = NumberTextInputFormatter();
-var genders = ['Dr.Phillips', 'Dr.Yancey', 'Dr.Red'];
-var time = ["3", "4", "5"];
+//var genders = ['Dr.Phillips', 'Dr.Yancey', 'Dr.Red'];
+var time = ["8 AM", "12 PM", "1 PM", "3 PM"];
 var selectedvalue;
 DateTime _dateTime;
   AppointmentPageController controller;
@@ -44,12 +36,7 @@ DateTime _dateTime;
       this.selectedvalue = val;
     });
   }
-  void _onBirthdayChanged(DateTime val){
-    setState(() {
-     this._dateTime = val; 
-    });
-  }
-  void changedate(DateTime pick){
+    void changedate(DateTime pick){
     String date = pick.toString();
     txt.text = date.substring(0, 11);
 
@@ -58,41 +45,18 @@ DateTime _dateTime;
   Widget build(BuildContext context) {
     this.context = context;
     return Scaffold (
-      backgroundColor: Colors.black,
+     backgroundColor: Colors.black,
       appBar: AppBar (
-        title: Text('Create Account', style: TextStyle(color: Colors.black),),
+        title: Text('Appointment Page', style: TextStyle(color: Colors.black),),
         backgroundColor: Colors.lightGreen,
+        iconTheme: IconThemeData (
+          color: Colors.black,
+        ), 
       ),
       body: Form (
         key: formKey,
         child: ListView (
-          children: <Widget> [
-            Text('Welcome!', style: TextStyle(fontSize: 20),
-            ),
-            Row(
-              children: <Widget> [
-                Container(
-                  padding: EdgeInsets.only(right: 20),
-                  child: Column(
-                    children: <Widget> [
-                      Text('Mercy Hospital'),
-                      Text('Edmond, Oklahoma'),
-                    ],
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.only(left: 20, right: 20),
-                  child: Icon(Icons.people),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget> [
-                IconButton(icon: Icon(Icons.call), onPressed: (){}//controller.AppointmentButtonPressed
-                ),
-              ],
-            ),
+          children: <Widget> [  
             TextFormField(
              style: TextStyle(color: Colors.white),
               decoration: InputDecoration(
@@ -105,7 +69,7 @@ DateTime _dateTime;
               readOnly: true,
             ),
             RaisedButton(
-              child: Text('Choose your date of birth'),
+              child: Text('Choose your appointment date'),
               textColor: Colors.black,
               color: Colors.lightGreen,
               onPressed: controller.saveBirthday,
@@ -129,13 +93,13 @@ DateTime _dateTime;
                onChanged:(String val) {
               _onDropDownChanged(val);
           },
-               hint: Text('Select Doctor', style: TextStyle(color: Colors.white),)
+               hint: Text('Select Time', style: TextStyle(color: Colors.white),)
              ),
            ),
-           RaisedButton(
-             child: Text('confirm'),
-             onPressed: (){}
-           ),
+          RaisedButton(child: Text('Confirm'),
+          textColor: Colors.black,
+              color: Colors.lightGreen,
+             onPressed: controller.AppointmentButtonPressed),
           ],
         ),
       ),
