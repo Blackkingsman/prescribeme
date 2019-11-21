@@ -94,11 +94,7 @@ void stateChanged(Function fn) {
                   title: Text('Sign Out'),
                   onTap: controller.signOut,
                 ),
-                ListTile (
-                  leading: Icon(Icons.access_alarms),
-                  title: Text('Refili'),
-                  onTap: controller.refillPage,
-                ),
+              
               ],
             ),
           ),
