@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Programs\\prescribeme\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "C:\\Users\\Terry Philliips Jr\\Videos\\prescribeme\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\tdphi\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\f459548d98225f43deec630d4bb50dd5\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Terry Philliips Jr\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\5abdb6b6178db0b8ee9eae3dc1f06722\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

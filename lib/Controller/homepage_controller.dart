@@ -60,22 +60,14 @@ class HomePageController {
     }
   }
 
-  void deleteButton() async {
-
-    state.deleteIndices.sort((n1, n2){
-      if (n1 < n2) return 1;
-      else if (n1 == n2) return 0;
-      else return -1;
-    });
-
-    for (var index in state.deleteIndices) {
+  void deleteButton(int index) async { 
       try {
             await MyFirebase.deleteBook(state.booklist[index]);
             state.booklist.removeAt(index);
       } catch (e) {
         print('BOOK DELETE ERROR: ' + e.toString());
       }
-    }
+    
 
     state.stateChanged((){
       state.deleteIndices = null;

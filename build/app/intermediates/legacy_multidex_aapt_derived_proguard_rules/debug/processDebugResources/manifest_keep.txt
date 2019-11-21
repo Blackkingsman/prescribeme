@@ -1,2 +1,2 @@
-# Referenced at D:\Programs\prescribeme\build\app\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:28
+# Referenced at C:\Users\Terry Philliips Jr\Videos\prescribeme\build\app\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:28
 -keep class io.flutter.app.FlutterApplication { <init>(...); }

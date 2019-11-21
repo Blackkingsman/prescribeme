@@ -51,7 +51,8 @@ void stateChanged(Function fn) {
             FlatButton.icon (
               label: Text('Delete'),
               icon: Icon(Icons.delete),
-              onPressed: controller.deleteButton,
+              onPressed: (){},
+              //onPressed: controller.deleteButton,
             ),
           ],
         ),
@@ -110,7 +111,25 @@ void stateChanged(Function fn) {
         body: ListView.builder(
           itemCount: booklist.length,
           itemBuilder: (BuildContext context, int index) {
-            return Container(
+            return Dismissible(
+              // Each Dismissible must contain a Key. Keys allow Flutter to
+              // uniquely identify widgets.
+              key: ObjectKey(booklist[index]),
+              // Provide a function that tells the app
+              // what to do after an item has been swiped away.
+              direction: DismissDirection.endToStart,
+              onDismissed: (direction) {
+                // Remove the item from the data source.
+                controller.deleteButton(index);
+                
+
+                // Then show a snackbar.
+                Scaffold.of(context)
+                    .showSnackBar(SnackBar(content: Text(booklist[index].title.toString()+"dismissed")));
+              },
+              // Show a red background as the item is swiped away.
+              background: Container(color: Colors.red ),
+              child: Container(
               padding: EdgeInsets.all(8.0),
               
               color: deleteIndices != null && deleteIndices.contains(index) ? Colors.cyan[200] : Colors.white,
@@ -127,6 +146,7 @@ void stateChanged(Function fn) {
                 onTap: () => controller.onTap(index),
                 onLongPress: () => controller.longPress(index),
               ),
+            )
             );
           },
         ),

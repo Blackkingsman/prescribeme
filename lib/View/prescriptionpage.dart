@@ -3,7 +3,6 @@ import '../Model/user.dart';
 import '../Model/book.dart';
 import 'package:flutter/services.dart';
 import '../Controller/presciptionpage_controller.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import '../Controller/formatters.dart';
 class PresciptionPage extends StatefulWidget {
 
