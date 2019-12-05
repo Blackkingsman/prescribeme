@@ -10,7 +10,7 @@ class ProfilePage extends StatelessWidget {
         iconTheme: IconThemeData (
           color: Colors.black,
         ),
-        title: Text("One Two", style: TextStyle (
+        title: Text("Your Information", style: TextStyle (
           fontWeight: FontWeight.bold,
           color: Colors.black,
           ),
@@ -44,27 +44,26 @@ class ProfilePage extends StatelessWidget {
                   SizedBox (
                     height: 10,
                   ),
-                  Text("User Information", style: TextStyle(color: Colors.white),),
+                  Text("Macy Smith", style: TextStyle(color: Colors.white, fontSize: 30),),
                 ],
               ),
             ),
           ),
           SliverToBoxAdapter (
             child: Container(
-              margin: EdgeInsets.only(left: 30, right: 30, bottom: 10),
+              margin: EdgeInsets.only(left: 55, right: 30, bottom: 100),
               child: Row (
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget> [
                   Column (
                     children: <Widget> [
-                    ],
-                  ),
-                  Column (
-                    children: <Widget> [
-                    ],
-                  ),
-                  Column (
-                    children: <Widget> [
+                      Text('Emergency Contact: Lance Smith - Husband', style: TextStyle(color: Colors.white, fontSize: 15),),
+                      Text('--------------------------------------------------------------------------', style: TextStyle(color: Colors.white),),
+                      Text('Husband Phone Number: (628)-725-9264', style: TextStyle(color: Colors.white, fontSize: 15),),
+                      Text('------------------------------------------------------------------------', style: TextStyle(color: Colors.white),),
+                        Text('Blood Type: B+ (B positive)', style: TextStyle(color: Colors.white, fontSize: 15),),
+                        Text('--------------------------------------------', style: TextStyle(color: Colors.white),),
+                        Text('Allergies: cats and peanut butter', style: TextStyle(color: Colors.white, fontSize: 15),),
                     ],
                   ),
                 ],

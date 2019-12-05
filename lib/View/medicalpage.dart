@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MedicalPage extends StatelessWidget {
-  List<String> data = ["Asthma", "Mumps", "Depression"];
+  List<String> data = ["Asthma", "Mumps", "Anxiety", "Diabetes Type 2", "Carpal Tunnel"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,9 +20,9 @@ class MedicalPage extends StatelessWidget {
                 //setState(()=>this.data.removeAt(i));
                 Scaffold.of(context).showSnackBar(
                   SnackBar(
-                      content: Text(dir==DismissDirection.startToEnd?"Item removed":"Item Liked"),
+                      content: Text(dir==DismissDirection.startToEnd?"Condition removed":"Condition Known"),
                     action: SnackBarAction(
-                        label: "UNDO",
+                        label: "OKAY",
                         onPressed: (){
                           //setState(()=>this.data.insert(i, item));
                         }

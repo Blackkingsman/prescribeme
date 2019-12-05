@@ -19,12 +19,17 @@ DateTime _dateTime;
   SignUpPageController controller;
   BuildContext context;
   var formKey= GlobalKey<FormState>();
+   var txt= TextEditingController();
   User user = User();
 
   SignUpPageState() {
     controller = SignUpPageController(this);
   }
+void changedate(DateTime pick){
+    String date = pick.toString();
+    txt.text = date.substring(0, 11);
 
+  }
   void stateChanged(Function fn) {
     setState(fn);
   }
@@ -46,6 +51,7 @@ DateTime _dateTime;
       appBar: AppBar (
         title: Text('Create Account', style: TextStyle(color: Colors.black),),
         backgroundColor: Colors.lightGreen,
+         iconTheme: new IconThemeData(color:Colors.black),
       ),
       body: Form (
         key: formKey,
@@ -99,6 +105,17 @@ DateTime _dateTime;
                hint: Text('Select Gender', style: TextStyle(color: Colors.white),)
              ),
            ),
+             TextFormField(
+             style: TextStyle(color: Colors.white),
+              decoration: InputDecoration(
+                hintText: "Date of Birth (You must be 18)" ,
+                labelText: "Date of Birth",
+               labelStyle: TextStyle(color: Colors.white),
+                hintStyle: TextStyle(color: Colors.white),
+              ),
+              controller: txt,
+              readOnly: true,
+            ),
             RaisedButton(
               child: Text('Choose your date of birth'),
               textColor: Colors.black,

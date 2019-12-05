@@ -65,14 +65,9 @@ void stateChanged(Function fn) {
                   decoration: BoxDecoration(
                     color: Colors.black
                   ),
-                  accountName: Text('One Two'),
-                  accountEmail: Text('1@uco.edu'),
+                  accountName: Text(''),
+                  accountEmail: Text(''),
                   currentAccountPicture: Image.asset('assets/images/random.jpg'),
-                ),
-                ListTile (
-                  leading: Icon(Icons.store),
-                  title: Text('Nearest Pharamcy'),
-                  onTap: controller.sharedWithMeMenu,
                 ),
                 ListTile (
                   leading: Icon(Icons.person_outline),

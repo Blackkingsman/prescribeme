@@ -7,7 +7,6 @@ import '../Model/book.dart';
 import '../View/prescriptionpage.dart';
 import '../View/appointmentpage.dart';
 
-
 class HomePageController {
   HomePageState state;
 
@@ -100,8 +99,6 @@ void deleteButton() async {
     for (var book in books) {
       print(book.title);
     }
-
-   
     Navigator.pop(state.context);
   }
 
@@ -117,12 +114,10 @@ void deleteButton() async {
     ));
   }
 
-   void medicalPage() {
+   void medicalPage() async {
   Navigator.push(state.context, MaterialPageRoute(
     builder: (context) =>  MedicalPage(),
     ));
   }
-
- 
 }
 

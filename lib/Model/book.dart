@@ -7,6 +7,7 @@ String pubyear;
 String imageUrl;
 String review;
 String createdBy;
+String conditions;
 DateTime lastUpdatedAt;
 List<dynamic> sharedWith;
 
@@ -19,6 +20,7 @@ Book({
   this.createdBy,
   this.lastUpdatedAt,
   this.sharedWith,
+  this.conditions,
 });
 
 Book.empty() {
@@ -28,6 +30,7 @@ Book.empty() {
   this.imageUrl = '';
   this.review = '';
   this.createdBy = '';
+  this.conditions = '';
   this.sharedWith = <dynamic>[];
 }
 
@@ -38,6 +41,7 @@ Book.clone(Book b) {
   this.pubyear = b.pubyear;
   this.review = b.review;
   this.imageUrl = b.imageUrl;
+  this.conditions = b.conditions;
   this.lastUpdatedAt = b.lastUpdatedAt;
   this.createdBy = b.createdBy;
   this.sharedWith = <dynamic>[]..addAll(b.sharedWith);
@@ -51,6 +55,7 @@ Map<String, dynamic> serialize() {
     IMAGEURL: imageUrl,
     REVIEW: review,
     CREATEDBY: createdBy,
+    CONDITIONS: conditions,
     LASTUPDATEDAT: lastUpdatedAt,
     SHAREDWITH: sharedWith,
   };
@@ -64,7 +69,9 @@ static Book deserialize(Map<String, dynamic> data, String docId) {
     imageUrl: data[Book.IMAGEURL],
     review: data[Book.REVIEW],
     createdBy: data[Book.CREATEDBY],
+    conditions: data[Book.CONDITIONS],
     sharedWith: data[Book.SHAREDWITH],
+
   );
   if (data[Book.LASTUPDATEDAT] != null) {
     book.lastUpdatedAt = DateTime.fromMillisecondsSinceEpoch(data[Book.LASTUPDATEDAT].millisecondsSinceEpoch);
@@ -74,6 +81,7 @@ static Book deserialize(Map<String, dynamic> data, String docId) {
 }
 
 static const BOOKSCOLLECTION = 'books';
+static const CONDITIONS = 'conditions';
 static const TITLE = 'title';
 static const AUTHOR = 'author';
 static const PUBYEAR = 'pubyear';

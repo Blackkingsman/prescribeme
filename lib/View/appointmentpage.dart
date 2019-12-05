@@ -3,10 +3,7 @@ import '../Controller/appointmentpage_controller.dart';
 import '../Model/user.dart';
 import '../Controller/formatters.dart';
 
-
 class AppointmentPage extends StatefulWidget {
-
-
   @override
   State<StatefulWidget> createState() {
     return AppointmentPageState();
@@ -99,7 +96,8 @@ DateTime _dateTime;
           RaisedButton(child: Text('Confirm'),
           textColor: Colors.black,
               color: Colors.lightGreen,
-             onPressed: controller.AppointmentButtonPressed),
+             onPressed: controller.AppointmentButtonPressed
+             ),
           ],
         ),
       ),

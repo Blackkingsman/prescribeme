@@ -39,17 +39,25 @@ class SignUpPageController {
   }
 
    void saveBirthday () async {
+         
+           DateTime today = DateTime.now();
+           DateTime setdate = DateTime(today.year-18, today.month, today.day);
            DateTime selecteddate = DateTime.now();
            DateTime pick = await showDatePicker(
+              
               context: state.context,
-              initialDate: selecteddate,
-              firstDate: DateTime(1990),
-              lastDate: DateTime(2019,12,31),
+              initialDate: setdate,
+              firstDate:DateTime(1900,12,31),
+              // setdate,
+              lastDate: setdate
+            //  DateTime(2019,12,31),
               );
         if(pick != null && pick !=selecteddate) 
         state.user.birthday = pick;
-            
+
+          state.changedate(pick);
   }
+
 
   String validateEmail(String value) {
     if (value == null || !value.contains('.') || !value.contains('@')) {

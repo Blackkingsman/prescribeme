@@ -62,6 +62,10 @@ static Future<String> createAccount({String email, String password}) async {
     }
     return booklist;
   }
+
+  
+
+
   static Future<void> updateBook(Book book) async {
     await Firestore.instance.collection(Book.BOOKSCOLLECTION)
             .document(book.documentId)
