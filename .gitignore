@@ -1,3 +1,8 @@
 
 build/
 .packages
+
+.packages
+.flutter-plugins
+*.iml
+android/.gradle/
